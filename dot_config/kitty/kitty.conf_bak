@@ -1,0 +1,82 @@
+# Fonts
+font_family      Maple Mono NF Regular
+bold_font        Maple Mono NF Bold
+italic_font      Maple Mono NF Italic
+bold_italic_font Maple Mono NF BoldItalic
+
+font_size 14.0
+
+enable_audio_bell no
+# window_padding_width 10
+confirm_os_window_close 0
+
+# Terminal window layout
+# remember_window_size yes
+initial_window_width 600
+initial_window_height 400
+background_opacity 0.7
+
+# The basic colors
+foreground              #DCD7BA
+background              #1F1F28
+selection_foreground    #C8C093
+selection_background    #2D4F67
+
+# Cursor colors
+cursor                  #C8C093
+cursor_text_color       #1E1E2E
+
+# URL underline color when hovering with mouse
+url_color               #72A7BC
+
+# Kitty window border colors
+active_border_color     #B4BEFE
+inactive_border_color   #6C7086
+bell_border_color       #F9E2AF
+
+# OS Window titlebar colors
+wayland_titlebar_color  #1E1E2E
+macos_titlebar_color    #1E1E2E
+
+# Tabs
+active_tab_foreground   #C8C093
+active_tab_background   #1F1F28
+inactive_tab_foreground #CDD6F4
+inactive_tab_background #1F1F28
+tab_bar_background      #15161E
+
+# Colors for marks (marked text in the terminal)
+mark1_foreground #1E1E2E
+mark1_background #B4BEFE
+mark2_foreground #1E1E2E
+mark2_background #CBA6F7
+mark3_foreground #1E1E2E
+mark3_background #74C7EC
+
+# normal
+color0 #16161D
+color1 #C34043
+color2 #76946A
+color3 #C0A36E
+color4 #7E9CD8
+color5 #957FB8
+color6 #6A9589
+color7 #C8C093
+
+# bright
+color8  #727169
+color9  #E82424
+color10 #98BB6C
+color11 #E6C384
+color12 #7FB4CA
+color13 #938AA9
+color14 #7AA89F
+color15 #DCD7BA
+
+# extended colors
+color16 #FFA066
+color17 #FF5D62
+
+linux_display_server x11
+
+map super+shift+enter       new_os_window_with_cwd

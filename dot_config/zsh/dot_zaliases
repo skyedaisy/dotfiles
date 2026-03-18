@@ -1,0 +1,21 @@
+# General
+alias ls="eza --icons --color=always --group-directories-first"
+alias ll="eza -lh --icons --color=always --group-directories-first"
+alias la="eza -lah --icons --color=always --group-directories-first"
+alias lt="eza --tree --level=2 --icons --color=always --group-directories-first"
+alias lnew="eza -lh --sort=newest --color=always --icons"
+alias lsize="eza -lh --sort=size --color=always --icons"
+alias ldir="eza -lD --color=always --icons --sort=newest"
+alias v="nvim"
+alias rm="rm -rf"
+alias c="clear"
+alias pkgs="expac -H M \"%m\t%n\" | sort -h"
+alias clean="rm -rf ~/.cache/* && yay -Sc"
+alias pkgl="pacman -Qqe"
+alias wlc="wl-copy"
+alias wlp="wl-paste"
+
+# Git
+alias gs="git status"
+alias gc="git commit"
+alias gcm='git commit -m $1'

@@ -1,0 +1,14 @@
+if command -v zsh >/dev/null; then
+    exec zsh
+fi
+
+export HISTFILE="$HOME/.bash_history"
+export HISTSIZE=50000
+export SAVEHIST=50000
+
+. "$HOME/.cargo/env"
+
+. "$HOME/.atuin/bin/env"
+
+[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+eval "$(atuin init bash)"

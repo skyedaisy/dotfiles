@@ -1,0 +1,9 @@
+zsh
+zsh
+yay
+zen
+chezmoi
+sddm-themes
+powerlevel10k
+kitty
+fastfetch

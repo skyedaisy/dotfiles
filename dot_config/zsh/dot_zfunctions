@@ -1,0 +1,27 @@
+mkcd() {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+extract() {
+    tar -xf "$1"
+}
+
+cpkg() {
+    sudo pacman -Rns $(pacman -Qtdq 2>/dev/null) 2>/dev/null || echo "No orphan packages"
+}
+
+pkgr() {
+    if [[ $# -eq 0 ]]; then
+        echo "Usage: pkgr <package>"
+        return 1
+    fi
+    sudo pacman -Rns "$@"
+}
+
+i() {
+    if [[ $# -eq 0 ]]; then
+        echo "Usage: i <package>"
+    fi
+    sudo pacman -S "$@" --noconfirm
+}

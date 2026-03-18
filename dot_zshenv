@@ -1,0 +1,3 @@
+# Custom location for the zshrc files
+export ZDOTDIR="$HOME/.config/zsh"
+
