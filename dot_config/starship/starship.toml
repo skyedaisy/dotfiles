@@ -24,8 +24,8 @@ palette = 'kanagawa'
 [directory]
 style = 'bold fg:cyan'
 format = '[$path ]($style)'
-truncation_length = 3
-truncation_symbol = '~'
+truncation_length = 5
+truncation_symbol = '~/'
 truncate_to_repo = false
 
 [character]
