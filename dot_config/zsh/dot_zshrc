@@ -11,3 +11,5 @@ eval "$(atuin init zsh --disable-up-arrow)"
 
 # Starship
 eval "$(starship init zsh)"
+
+. "$HOME/.local/share/../bin/env"
