@@ -1,0 +1,27 @@
+# Main logic to check if the path exist, if it does, stop adding to the path
+add_path() {
+	case ":$PATH:" in
+	*:"$1":*) ;;
+	*) export PATH="$1:$PATH" ;;
+	esac
+}
+
+# Atuin
+[[ -d "$HOME/.atuin/bin" ]] && add_path "$HOME/.atuin/bin"
+
+# Golang
+[[ -d "$HOME/go/bin" ]] && add_path "$HOME/go/bin"
+[[ -d "/usr/local/go/bin" ]] && add_path "/usr/local/go/bin"
+
+# Cargo/Rust
+[[ -d "$HOME/.cargo/bin" ]] && add_path "$HOME/.cargo/bin"
+
+# uv
+[[ -d "$HOME/.local/share/../bin" ]] && add_path "$HOME/.local/share/../bin"
+
+# Setup-env (My project)
+[[ -d "$HOME/setup-env" ]] && add_path "$HOME/setup-env"
+[[ -d "$HOME/setup-env/interact" ]] && add_path "$HOME/setup-env/interact"
+
+# Starship
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"

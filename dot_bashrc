@@ -1,16 +1,15 @@
-if command -v zsh >/dev/null; then
-    exec zsh
-fi
+#if command -v zsh >/dev/null; then
+#    exec zsh
+#fi
+#export HISTFILE="$HOME/.bash_history"
+#export HISTSIZE=50000
+#export SAVEHIST=50000
 
-export HISTFILE="$HOME/.bash_history"
-export HISTSIZE=50000
-export SAVEHIST=50000
+#source "$HOME/.cargo/env"
 
-. "$HOME/.cargo/env"
+#source "$HOME/.atuin/bin/env"
 
-. "$HOME/.atuin/bin/env"
-
-[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
-eval "$(atuin init bash)"
-
-. "$HOME/.local/share/../bin/env"
+#[[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
+#eval "$(atuin init bash)"
+#eval "$(starship init bash)"
+#source "$HOME/.local/share/../bin/env"

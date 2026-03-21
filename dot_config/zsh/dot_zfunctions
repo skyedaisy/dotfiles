@@ -25,3 +25,13 @@ i() {
     fi
     sudo pacman -S "$@" --noconfirm
 }
+yi() {
+  if [[ $# -eq 0 ]]; then
+    echo "Usage: yi <package>"
+  fi
+  yay -S --noconfirm --answerdiff None --answerclean None --mflags "--noconfirm" --cleanafter "$@"
+}
+yc(){
+  sudo rm -rf /var/cache/pacman/pkg/download-*
+  yay -Sc --noconfirm
+}

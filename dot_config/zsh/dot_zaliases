@@ -19,3 +19,6 @@ alias wlp="wl-paste"
 alias gs="git status"
 alias gc="git commit"
 alias gcm='git commit -m $1'
+
+# Custom
+alias clpath="env -i bash --noprofile --norc"

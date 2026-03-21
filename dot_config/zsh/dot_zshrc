@@ -1,15 +1,23 @@
 #fastfetch
 # Source external config files
-[[ -f ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zplugins
+[[ -f ${ZDOTDIR:-$HOME}/.zcustom ]] && source ${ZDOTDIR:-$HOME}/.zcustom
+[[ -f ${ZDOTDIR:-$HOME}/.zplugins ]] && source ${ZDOTDIR:-$HOME}/.zplugins
 [[ -f ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zaliases
-[[ -f ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zoptions
-[[ -f ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zfunctions
+[[ -f ${ZDOTDIR:-$HOME}/.zoptions ]] && source ${ZDOTDIR:-$HOME}/.zoptions
+[[ -f ${ZDOTDIR:-$HOME}/.zfunctions ]] && source ${ZDOTDIR:-$HOME}/.zfunctions
+
+# Utils
+export BROWSER=zen-browser
+export TERMINAL=kitty
+export TERM=xterm-256color
+
+#History
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=100000
+export SAVEHIST=100000
 
 # Atuin
-source "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh --disable-up-arrow)"
 
 # Starship
 eval "$(starship init zsh)"
-
-. "$HOME/.local/share/../bin/env"

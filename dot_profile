@@ -1,5 +1,0 @@
-. "$HOME/.cargo/env"
-
-. "$HOME/.atuin/bin/env"
-
-. "$HOME/.local/share/../bin/env"
