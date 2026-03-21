@@ -29,9 +29,40 @@ yi() {
   if [[ $# -eq 0 ]]; then
     echo "Usage: yi <package>"
   fi
-  yay -S --noconfirm --answerdiff None --answerclean None --mflags "--noconfirm" --cleanafter "$@"
+  yay -S --noconfirm --needed --sudoloop --cleanafter "$@"
 }
 yc(){
   sudo rm -rf /var/cache/pacman/pkg/download-*
   yay -Sc --noconfirm
+}
+chs() {
+  local shell="$1"
+
+  if ! command -v "$shell" >/dev/null; then
+    echo "Shell $shell not found"
+    return 1
+  fi
+
+  local curr_shell
+  curr_shell="$(basename $SHELL)"
+
+  echo "Current shell is: $curr_shell"
+  echo "Changing to: $shell"
+
+  if [[ "$shell" != "$curr_shell" ]]; then
+    chsh -s "$(command -v "$shell")"
+    echo "Shell changed."
+    echo "Run 'exec $shell' or log out and log back in."
+   
+    while true; do
+       read ans
+      case "$ans" in
+        y|Y) sudo reboot ;;
+        n|N) return 0 ;;
+        *) echo "Please enter y or n." ;;
+      esac
+    done
+  else
+    echo "Already using $shell"
+  fi
 }

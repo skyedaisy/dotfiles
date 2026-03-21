@@ -1,7 +1,7 @@
 #fastfetch
 # Source external config files
-[[ -f ${ZDOTDIR:-$HOME}/.zcustom ]] && source ${ZDOTDIR:-$HOME}/.zcustom
 [[ -f ${ZDOTDIR:-$HOME}/.zplugins ]] && source ${ZDOTDIR:-$HOME}/.zplugins
+[[ -f ${ZDOTDIR:-$HOME}/.zcustom ]] && source ${ZDOTDIR:-$HOME}/.zcustom
 [[ -f ${ZDOTDIR:-$HOME}/.zaliases ]] && source ${ZDOTDIR:-$HOME}/.zaliases
 [[ -f ${ZDOTDIR:-$HOME}/.zoptions ]] && source ${ZDOTDIR:-$HOME}/.zoptions
 [[ -f ${ZDOTDIR:-$HOME}/.zfunctions ]] && source ${ZDOTDIR:-$HOME}/.zfunctions

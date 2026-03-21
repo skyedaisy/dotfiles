@@ -25,4 +25,4 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_SCREENSHOTS_DIR="$HOME/Pictures/screenshots"
 
 # Hide computer name in terminal
-export DEFAULT_USER="$(whoami)"
+#export DEFAULT_USER="$(whoami)"
