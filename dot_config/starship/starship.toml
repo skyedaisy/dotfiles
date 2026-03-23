@@ -29,9 +29,11 @@ truncation_symbol = '~/'
 truncate_to_repo = false
 
 [character]
-success_symbol = "[](green)"
-error_symbol = "[](pastel_red)"
-vimcmd_symbol = "[](green)"
+#success_symbol = "[](green)"
+#error_symbol = "[](pastel_red)"
+#vimcmd_symbol = "[](green)"
+success_symbol = "[ ](bold fg:b_green)"
+error_symbol = "[ ](bold fg:pastel_red)"
 
 #[directory.substitutions]
 #'Documents' = '󰈙'
