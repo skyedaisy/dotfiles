@@ -14,7 +14,7 @@ alias clean="rm -rf ~/.cache/* && yay -Sc"
 alias pkgl="pacman -Qqe"
 alias wlc="wl-copy"
 alias wlp="wl-paste"
-
+alias tes="a"
 # Git
 alias gs="git status"
 alias gc="git commit"
